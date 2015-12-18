@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block meta %}
+<meta name="author" content="{{ article.author.name }}" />
+<meta name="description" content="{{ article.summary|striptags }}" />
+<meta name="keywords" content="{{ article.tags|join(', ') }}">
+{% include "partial/og_article.html" %}
+{% endblock %}
+
+{% block title %} &ndash; {{ article.title }}{% endblock %}
+
+{% block content %}
+<article>
+  <header>
+    <h1 id="{{ article.slug }}">{{ article.title }}</h1>
+    <p>Posted on {{ article.locale_date }} in <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
+  </header>
+  <div>
+    {{ article.content }}
+  </div>
+  <div class="tag-cloud">
+    <p>
+      {% if article.tags %}
+      {% for tag in article.tags %}
+      <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+      {% endfor %}
+      {% endif %}
+    </p>
+  </div>
+  {% if ADD_THIS_ID %}
+  <div class="center social-share">
+    <p>Like this article? Share it with your friends!</p>
+    <div class="addthis_native_toolbox"></div>
+    <div class="addthis_sharing_toolbox"></div>
+  </div>
+  {% endif %}
+  {% include "partial/disqus.html" %}
+</article>
+{% endblock %}
+
+{% block additional_js %}
+  {% include "partial/jsonld_article.html" %}
+{% endblock %}

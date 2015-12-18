@@ -8,6 +8,8 @@ SITEURL = 'http://charlessartori.com'
 
 PATH = 'content'
 
+THEME = 'flex'
+
 TIMEZONE = 'America/Sao_Paulo'
 
 DEFAULT_LANG = 'en'
