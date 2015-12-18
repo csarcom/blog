@@ -15,4 +15,3 @@ Docker run
 ----------
 
     docker run -it -p 8000:8000 -v /$(pwd):/app csarcom/blog
-
