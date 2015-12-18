@@ -1,0 +1,13 @@
+language: python
+python:
+    - "2.7"
+install: "sudo pip install -r requirements.txt"
+script:
+    - fab publish
+env:
+    secure: "CQOzjQrgWiY+A8KXcS0A1peHQlUqF9aDMLooTkQoGaMpe0eW7Icvnat2KKf8wVSDDx0DAok3OC+upfsOdJlTxwnVX6wFw6vJSLrRssuQi6U2VEpDVofoFvtIOBy6vMmA9qTUjKf/TaVHolXg/TzjWuE4o0SJ5CK/5bLHD4203nNxr0K4qAsJoFbBrmpSkabhN+jIZvIZkTDxLQZ46w9mtE9eYioQuNCBEt4/I5wf6A/oXhN14DR/Df/mq8x/gnFJ8BeSpcoZmveFnbQaRgIuIqvBcF6YIZZ30cObTDdWKt0kueTblkjKy26zX1MaoGE/JhkNTUsTpHn504BYmHH91I0LGav2r7o+uGFIj8SMnwDVNLb6CEz5eNPZaQ/koXvdXjCnZ5nlvvo+TUt6Thz+DBfxdS0lx4B02lkKQzsmguXxFmswWPngwySIuGcIQPf0tWR7Mc3fZ5TXs2w8ONBkp0x0Iw4YpW4QICEY4nDvdRFX9ujdMjcM5K437eDF6Nkj5rounqTwH+qNIY1KyWBZNQcgBoRfAvqOVUSEWjPnOqsiuWSTX7KVDQzTSn8M5DqysI6prPaH4SQECU5TqrwmSuuSHnVPXUzWK/qLSuwVyFeBUYkjc4hYEVjLTdZsZvPNonamgQcaJIz6F4q3HWwxAI8YWlDRuvAONwAak+Sd3l8="
+notifications:
+    email: false
+branches:
+    only:
+        - master
