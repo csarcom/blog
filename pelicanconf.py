@@ -29,5 +29,7 @@ SOCIAL = (('github', 'https://github.com/csarcom'),
 
 DEFAULT_PAGINATION = 3
 
+DISQUS_SITENAME = 'charlessartori'
+
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
