@@ -14,4 +14,4 @@ Dcoker build
 Docker run
 ----------
 
-    docker run -it -p 8000:8000 -v /$(pwd):/app csarcom/blog
+    docker run -it --rm -p 8000:8000 -v /$(pwd):/app csarcom/blog

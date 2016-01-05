@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Charles Sartori'
 SITENAME = 'Charles Sartori'
 SITEURL = 'http://charlessartori.com'
+#SITEURL = 'http://localhost:8000'
 
 PATH = 'content'
 
@@ -27,9 +28,13 @@ SOCIAL = (('github', 'https://github.com/csarcom'),
           ('facebook', 'https://www.facebook.com/charlesmpsartori'),
           ('linkedin', 'https://br.linkedin.com/in/charlessartori'))
 
-DEFAULT_PAGINATION = 3
+DEFAULT_PAGINATION = 1
 
 DISQUS_SITENAME = 'charlessartori'
+
+STATIC_PATHS = ['images', 'pdfs']
+PLUGIN_PATHS = ['pelican-plugins']
+PLUGINS = []
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
